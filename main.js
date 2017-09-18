@@ -13,10 +13,11 @@
             const { offsetTop, clientHeight } = img
             const imgTop = offsetTop
             const imgBottom = imgTop + clientHeight
-            if (
+            const isImageShowing = 
                 topOfScreen < imgTop && imgTop < bottomOfScreen ||
                 topOfScreen < imgBottom && imgBottom < bottomOfScreen
-            ) {
+
+            if (isImageShowing) {
                 img.classList.add("fadeIn")
             } else {
                 img.classList.remove("fadeIn")
