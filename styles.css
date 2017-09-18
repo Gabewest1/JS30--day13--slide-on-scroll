@@ -1,5 +1,5 @@
 body {
-    background: papayawhip;
+    background: #FF21AE;
 }
 img {
     opacity: 0;
@@ -11,20 +11,28 @@ img {
     float: left;
     position: relative;
     left: -100%;
+    margin-right: 1em;
 }
-
 .align-right {
     float: right;
     position: relative;
     left: 100%;
+    margin-left: 1em;
 }
-
 .fadeIn {
     left: 0;
     opacity: 1;
 }
-
 .site-wrap {
     max-width: 668px;
-    margin: 0 auto;
+    margin: 4em auto;
+    padding: 0 2em;
+    background: white;
+    text-align: justify;
+}
+.header {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: .67em;
 }
