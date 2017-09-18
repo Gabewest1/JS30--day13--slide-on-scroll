@@ -1,0 +1,66 @@
+<html>
+<head>
+    <style>
+        div {
+            margin: 30px;
+        }
+        .div1 {
+            top: 100px;
+            left: 100px;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background: red;
+        }
+
+        .div2 {
+            top: 201px;
+            left: 201px;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background: blue;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 35px;
+        }
+
+        div div {
+            background: yellow;
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" data-name="div1">
+        <div class="absolute" data-name="div1_child"></div>
+    </div> 
+    <div class="div2" data-name="div2">
+        <div class="absolute" data-name="div2_child"></div>
+    </div> 
+
+    <script>
+        let divs = document.querySelectorAll("div")
+        divs.forEach(consoleStats)
+
+        function consoleStats(div) {
+            const name = div.getAttribute("data-name")
+            const { 
+                clientTop, clientLeft, offsetTop, offsetLeft, scrollTop, scrollLeft,
+                clientHeight, clientWidth, offsetHeight, offsetWidth, scrollHeight, scrollWidth
+            } = div
+
+            const properties = { 
+                clientTop, clientLeft, offsetTop, offsetLeft, scrollTop, scrollLeft,
+                clientHeight, clientWidth, offsetHeight, offsetWidth, scrollHeight, scrollWidth
+            }
+
+            console.log(`${name}:`, properties)
+        }
+    </script>
+</body>
+</html>

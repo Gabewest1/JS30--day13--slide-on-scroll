@@ -1,0 +1,30 @@
+body {
+    background: papayawhip;
+}
+img {
+    opacity: 0;
+    transition: 
+        left .7s ease-in,
+        opacity .7s linear;
+}
+.align-left {
+    float: left;
+    position: relative;
+    left: -100%;
+}
+
+.align-right {
+    float: right;
+    position: relative;
+    left: 100%;
+}
+
+.fadeIn {
+    left: 0;
+    opacity: 1;
+}
+
+.site-wrap {
+    max-width: 668px;
+    margin: 0 auto;
+}
