@@ -18,9 +18,9 @@
                 topOfScreen < imgBottom && imgBottom < bottomOfScreen
 
             if (isImageShowing) {
-                img.classList.add("fadeIn")
+                img.classList.add("active")
             } else {
-                img.classList.remove("fadeIn")
+                img.classList.remove("active")
             }
         })
 
